@@ -1,10 +1,6 @@
-#!/usr/bin/python
 import json, sys, hashlib, fractions
 
-def usage():
-    print """Usage:
-    python find_waldo.py student_id (i.e., qchenxiong3)"""
-    sys.exit(1)
+#Usage:python find_waldo.py student_id (i.e., qchenxiong3)
 
 #TODO -- n1 and n2 share p or q?
 def is_waldo(n1, n2):
@@ -43,16 +39,14 @@ def get_private_key(n1, n2, e):
 
 def main():
     if len(sys.argv) != 2:
-        usage()
 
-    all_keys = None
+        all_keys = None
     with open("keys.json", 'r') as f:
         all_keys = json.load(f)
 
     name = hashlib.sha224(sys.argv[1].strip()).hexdigest()
     if name not in all_keys:
-        print sys.argv[1], "not in keylist"
-        usage()
+        print (sys.argv[1], "not in keylist")
 
     pub_key = all_keys[name]
     n1 = int(pub_key['N'], 16)
@@ -60,7 +54,7 @@ def main():
     d = 0
     waldo = "dolores"
 
-    print "your public key: (", hex(n1).rstrip("L"), ",", hex(e).rstrip("L"), ")"
+    print ("your public key: (", hex(n1).rstrip("L"), ",", hex(e).rstrip("L"), ")")
 
     for classmate in all_keys:
         if classmate == name:
@@ -72,8 +66,8 @@ def main():
             d = get_private_key(n1, n2, e)
             break
 
-    print "your private key: ", hex(d).rstrip("L")
-    print "your waldo: ", waldo
+    print (*"your private key: ", hex(d).rstrip("L"))
+    print (*"your waldo: ", waldo)
 
 
 if __name__ == "__main__":
