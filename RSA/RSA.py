@@ -18,7 +18,7 @@ d = 1183
 def encrypt(pt,n,e):
     x = (pt**e) % n
     return x
-print(encrypt(ptj,n,e))
+3print(encrypt(ptj,n,e))
 
 def decrypt(ct,n,d):
     decrypted=[]
