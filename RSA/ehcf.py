@@ -7,8 +7,8 @@ def ehcf(a,b):
         q3=q1-r*q2
         h3=h1-r*h2
         p1,q1,h1,p2,q2,h2=p2,q2,h2,p3,q3,h3
-    return p1,q1,h1
-
+    return h1
+#print(ehcf(12,8))
 
 def multiple(n,e):
     p1,q1,h1=ehcf(n,e)
@@ -17,4 +17,4 @@ def multiple(n,e):
     while q1+i*n<0:
         i+=1
     print("d and positive d are", q1,q1+i*n)
-print(multiple(2**36,3**10))
+#print(multiple(2**36,3**10))
