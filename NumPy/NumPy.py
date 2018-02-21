@@ -1,14 +1,16 @@
 import numpy as np
 import math
 
-'''x = np.arange(3)
+x = np.arange(3)
 print(x)
 w = np.arange(3*3).reshape(3,3)
 print(w)
 f = np.dot(w,x)
 print(f)
+sum = np.sum(w, axis=0)
+print(sum)
 
-a = 0*0+1*1+2*2
+'''a = 0*0+1*1+2*2
 b = 0*3+1*4+2*5
 c = 0*6+1*7+2*8
 print(a,b,c)
@@ -51,7 +53,7 @@ ddot = (1 - f) * f # gradient on dot variable, using the sigmoid gradient deriva
 print(ddot)
 dx = [w[0] * ddot, w[1] * ddot] # backprop into x
 print(dx)
-dw = [x[0] * ddot, x[1] * ddot, 1.0 * ddot] # backprop into w'''
+dw = [x[0] * ddot, x[1] * ddot, 1.0 * ddot] # backprop into w
 
 W = np.random.randn(5, 6)
 X = np.random.randn(6, 3)
@@ -65,4 +67,4 @@ dW = dD.dot(X.T) #.T gives the transpose of the matrix
 dX = W.T.dot(dD)
 print(dD)
 print(dW)
-print(dX)
+print(dX)'''
