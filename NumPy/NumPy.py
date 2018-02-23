@@ -1,6 +1,7 @@
 import numpy as np
 import math
 
+'''
 x = np.arange(3)
 print(x)
 w = np.arange(3*3).reshape(3,3)
@@ -10,7 +11,7 @@ print(f)
 sum = np.sum(w, axis=0)
 print(sum)
 
-'''a = 0*0+1*1+2*2
+a = 0*0+1*1+2*2
 b = 0*3+1*4+2*5
 c = 0*6+1*7+2*8
 print(a,b,c)
@@ -67,4 +68,12 @@ dW = dD.dot(X.T) #.T gives the transpose of the matrix
 dX = W.T.dot(dD)
 print(dD)
 print(dW)
-print(dX)'''
+print(dX)
+
+def graph(x,y):
+    print(((2*x-y)**2)*(x-2*y))
+print(graph(5,5))
+print(graph(5,-5))
+print(graph(-5,5))
+print(graph(-5,-5))
+'''

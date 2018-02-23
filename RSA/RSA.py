@@ -19,13 +19,13 @@ e2 = 660013908131404300071399927942053573579541800017841532886037854831174281488
 d2 = 605454998462383360255735460973765258085322010750666210830493723254929393739511146267246352434304258863584088592297816801229717063764568970258551426854834012466828864958368281847464340743960470959
 print("n2:", n2)
 
-def encrypt(pt, n, e):
+def encrypt(pt, e, n):
     return pow(pt, e, n)
-print(encrypt(ptj,n2,e2))
+print("Encrypted:", encrypt(ptj, e, n))
 
 def decrypt(ct, n, d):
     return pow(ct, d, n)
-print(decrypt(encrypt(ptj,n2,e2),n2,d2))
+#print(decrypt(encrypt(ptj,n2,e2),n2,d2))
 
 def encryptList(pt,n,e):
     encrypted=[]
