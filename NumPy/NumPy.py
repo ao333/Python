@@ -15,18 +15,24 @@ a = 0*0+1*1+2*2
 b = 0*3+1*4+2*5
 c = 0*6+1*7+2*8
 print(a,b,c)
+'''
 
-x = np.arange(3)
+x = np.arange(4*3).reshape(4,3)
+y = np.array([1,2])
+r = np.repeat(y,6)
+n = x.shape[0]-1
 print(x)
-w = np.arange(3*3).reshape(3,3)
-print(w)
-f = np.dot(w,x)
-print(f)
+print(y)
+print(r)
+print(n)
+print(x[range(n),r])
 
+'''
 x = np.array([56,231,24,2])
 N = x.shape[0]
 X = x.reshape(N, -1)
 print(X)
+print(N)
 
 w = np.array([[0.2,-0.5,0.1,2],[1.5,1.3,2.1,0],[0,0.25,0.2,-0.3]]).reshape(3,4)
 print(w)
